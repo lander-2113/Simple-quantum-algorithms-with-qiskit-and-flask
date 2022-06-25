@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}{% endblock%}
+
+{% block body%}
+    <h1 class="center">Deutsch Jozsa</h1>
+
+
+    <form id="formdj" class="center" action="/deutsch-jozsa" method="POST">
+        <label for="">Function should be constant for balanced: </label>
+        <select name="option" id="option">
+            <option value="balanced">balanced</option>
+            <option value="constant">constant</option>
+        </select><br><br>
+        <label for="">Number of bits: </label>
+        <input name="n" type="number" min="1" value="1"><br>
+        <input type="submit">
+    </form>
+    <br>
+    <p class="center"><strong>For {{type}}, and {{ n }} bit string, it took {{ time }} sec</strong></p>
+    <br><br>
+    <h2 class="center">Circuit</h2>
+    <img class="center" style="margin: 0 auto;" src="{{url_for('static', filename='images/dj-ckt.png')}}" alt="">
+
+    <h2 class="center" >Histogram</h2>
+    <img class="center" src="{{ url_for('static', filename='images/dj-hist.png' ) }}" alt="">
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript">
+
+        function check() {
+            
+            return true;
+        }
+    </script>
+{% endblock%}

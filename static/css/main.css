@@ -1,0 +1,50 @@
+/************************************* tag selector ********************************/
+body {
+    margin: 0;
+    /* background-image: url('../images/qk.jpg'); */
+}
+
+a {
+    text-decoration: none;
+    font-size: 5rem;
+}
+
+a:hover {
+    color: blue;
+}
+
+/************************************** class selector ******************************/
+
+
+.head h1, p {
+    display: block;
+    margin: 0 auto;    
+}
+
+.head {
+    padding-bottom: 10px;
+}
+
+.top {
+    display: block;
+    text-align: center;
+}
+.top ul {
+    margin-top: 0;
+    list-style: none;
+}
+
+.item {
+    padding-bottom: 20px;
+}
+
+.code {
+    margin-left: 40%;
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+/************************************** id selector ******************************/

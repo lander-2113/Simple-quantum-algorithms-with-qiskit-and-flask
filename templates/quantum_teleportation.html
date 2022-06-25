@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Quantum Teleportation</title>
+{% endblock %}
+
+{% block body %}
+
+
+<div class="head">
+
+    <h1 style="text-align: center;">QUANTUM TELEPORTATION</h1>
+    
+</div>
+
+<div class="top">
+    <h2>Qiskit implementation</h2>
+    <p class="code" >
+        ckt = QuantumCircuit(3, 3)<br>
+        ckt.draw(output='mpl')<br>
+        ckt.x(0)<br>
+        ckt.barrier()<br><br>
+
+        ckt.h(1)<br>
+        ckt.cx(1, 2)<br>
+        ckt.cx(0, 1)<br>
+        ckt.h(0)<br><br>
+
+        ckt.barrier()<br>
+        ckt.measure([0, 1], [0, 1])<br><br>
+
+        ckt.barrier()<br>
+        ckt.cx(1, 2)<br>
+        ckt.cz(0, 2)<br>
+        ckt.draw(output='mpl')<br>
+        ckt.measure(2, 2)<br>
+        fig = ckt.draw(output='mpl')
+    </p>
+    <hr>
+    <h3>The quantum circuit</h3>
+    <img src="{{ url_for('static', filename='images/qtele.png') }}" text-align="center" alt="TELEPORTATION CIRCUIT">
+    
+    
+    <hr>
+    <h3>Q Sphere</h3>
+    <img src="{{url_for('static', filename='images/qsph.png')}}" alt="QSPHERE">
+
+        
+    <hr>
+    <h3>Histogram</h3>
+    <img src="{{url_for('static', filename='images/hist.png')}}" alt="HISTOGRAM">
+</div>
+
+
+{% endblock %}
